@@ -1,0 +1,100 @@
+//=================
+//Mixins
+//==================
+
+//--------Flexbox
+//--------FlexContainer
+@mixin flexy (
+   $disp:flex,
+   $dir:null,
+   $wrap:null,
+   $just:null,
+   $align:null,
+   $flow: null) {
+   display: $disp;
+   flex-direction: $dir;
+   flex-wrap: $wrap;
+   justify-content: $just;
+   align-content: $align;
+   flex-flow: $flow;
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   flex-basis: 90%;
+   padding: 1%;
+   max-width: 100%;
+   min-width: 50%;
+   height: 100%;
+}
+//all body
+.container {
+  @include flexy($dir: column, $wrap: wrap, $just: center);
+
+}
+//header image and link
+//all grid rows
+.grid__row {
+  @include flexy($wrap: wrap,$flow: column, $just: center);
+}
+//navigation
+.nav {
+  @include flexy($wrap: wrap, $flow: column, $just: center, $align: space-between)
+
+}
+.grid__col--2,
+.grid__col--3,
+.grid__col--4,
+.grid__col--5,
+.grid__col--6,
+.grid__col--7,
+.grid__col--8,
+.grid__col--9,
+.grid__col--10,
+.grid__col--11,
+.grid__col--12,
+.centered,
+.theme__colors,
+.form {
+    @include flexy($wrap: wrap,$flow: column, $just: center);
+}
+
+.card {
+  @include flexy($wrap: wrap, $just: center, $align: space-between)
+}
+.headline--secondary {
+    @include flexy($wrap: wrap, $just: center, $align: space-between)
+}
+//----------FlexItems
+@mixin flexyitem(
+    $flex: 1,
+    $order: null,
+    $alignself: null) {
+      flex: $flex;
+      order: $order;
+      align-self: $alignself;
+    }
+//logo
+.img--logo {
+  @include flexyitem($order: 1,)
+}
+
+
+//----Images
+@mixin img (
+  $mw: 100%,
+  $height: auto ){
+  max-width: $mw;
+  height: $height;
+}
+.img--logo {
+  @include img;
+}
+.img--avatar {
+  @include img;
+}
+.img--frame {
+  @include img;
+}
+.img--avatar {
+  @include img;
+}
