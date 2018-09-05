@@ -1,29 +1,35 @@
 .container {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  align-content: center;
+  flex-flow: column;
+  align-self: center;
+  align-items: center;
   padding: 0;
   margin: 0;
   list-style: none;
   flex-basis: 90%;
   padding: 1%;
   max-width: 100%;
-  min-width: 50%;
+  min-width: 480px;
   height: 100%; }
 
 .grid__row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-content: center;
   flex-flow: column;
+  align-self: center;
+  align-items: center;
   padding: 0;
   margin: 0;
   list-style: none;
   flex-basis: 90%;
   padding: 1%;
   max-width: 100%;
-  min-width: 50%;
+  min-width: 480px;
   height: 100%; }
 
 .nav {
@@ -32,40 +38,15 @@
   justify-content: center;
   align-content: space-between;
   flex-flow: column;
+  align-self: center;
+  align-items: center;
   padding: 0;
   margin: 0;
   list-style: none;
   flex-basis: 90%;
   padding: 1%;
   max-width: 100%;
-  min-width: 50%;
-  height: 100%; }
-
-.grid__col--2,
-.grid__col--3,
-.grid__col--4,
-.grid__col--5,
-.grid__col--6,
-.grid__col--7,
-.grid__col--8,
-.grid__col--9,
-.grid__col--10,
-.grid__col--11,
-.grid__col--12,
-.centered,
-.theme__colors,
-.form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-flow: column;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  flex-basis: 90%;
-  padding: 1%;
-  max-width: 100%;
-  min-width: 50%;
+  min-width: 480px;
   height: 100%; }
 
 .card {
@@ -79,7 +60,7 @@
   flex-basis: 90%;
   padding: 1%;
   max-width: 100%;
-  min-width: 50%;
+  min-width: 480px;
   height: 100%; }
 
 .headline--secondary {
@@ -93,7 +74,7 @@
   flex-basis: 90%;
   padding: 1%;
   max-width: 100%;
-  min-width: 50%;
+  min-width: 480px;
   height: 100%; }
 
 .img--logo {
