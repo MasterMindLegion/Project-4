@@ -6,30 +6,32 @@
 
 //--------FlexContainer
 @mixin flexy (
-   $disp:flex,
-   $dir:null,
-   $wrap:null,
-   $just:null,
-   $align:null,
-   $flow: null,
-   $alignself: null,
-   $alignitems: null) {
-   display: $disp;
-   flex-direction: $dir;
-   flex-wrap: $wrap;
-   justify-content: $just;
-   align-content: $align;
-   flex-flow: $flow;
-   align-self: $alignself;
-   align-items: $alignitems;
-   padding: 0;
-   margin: 0;
-   list-style: none;
-   flex-basis: 90%;
-   padding: 1%;
-   max-width: 100%;
-   min-width: 480px;
-   max-height: 100%;
+       $disp:flex,
+       $dir:null,
+       $wrap:null,
+       $just:null,
+       $align:null,
+       $flow: null,
+       $alignself: null,
+       $alignitems: null,
+       $textalign: null,
+       $basis: null) {
+       display: $disp;
+       flex-direction: $dir;
+       flex-wrap: $wrap;
+       justify-content: $just;
+       align-content: $align;
+       flex-flow: $flow;
+       align-self: $alignself;
+       align-items: $alignitems;
+       text-align: $textalign;
+       flex-basis: $basis;
+       padding: 0;
+       margin: 0;
+       list-style: none;
+       flex-basis: 90%;
+       min-width: 100%;
+       padding: 1%;
 }
 //all body
 .container {
@@ -37,45 +39,51 @@
 }
 //all grid rows
 .grid__row {
-  @include flexy($wrap: wrap,$flow: column, $just: center, $align: center, $alignitems: center, $alignself: center);
+  @include flexy($wrap: wrap,$flow: column, $just: center, $align: center, $alignitems: center, $alignself: center, $basis: 100%);
 }
-.card,
+// card row
+.card {
+  @include flexy($wrap: wrap,$flow: column, $just: center, $align: center, $textalign: left, $basis: 100%)
+}
+//form
 .form {
-  @include flexy($wrap: wrap,$flow: column, $just: center, $align: center, $alignitems: center, $alignself: center);
+  @include flexy($wrap: wrap,$flow: column, $just: center, $align: center, $alignitems: center, $alignself: center, $basis: 100%);
 }
+.form {
+  .headline--secondary {
+    @include flexy($wrap: wrap, $flow: row, $basis: 100%, $just: flex-start)
+  }
+}
+
 //----------FlexItems
 @mixin flexyitem(
-    $flex: 1,
-    $order: null,
-    $alignself: null) {
+      $flex: 1,
+      $order: null,
+      $alignself: null) {
       flex: $flex;
       order: $order;
       align-self: $alignself;
     }
+//Form
+
 //logo
 .img--logo {
   @include flexyitem($order: 1,)
 }
-
 //=========Responsive Images
 @mixin img (
-  $mw: 100%,
-  $height: auto ){
-  max-width: $mw;
-  height: $height;
+      $mw: 100%,
+      $height: auto ){
+      max-width: $mw;
+      height: $height;
 }
-.img--logo {
+
+.img--logo,
+.img--frame,
+.img--avatar{
   @include img;
 }
-.img--avatar {
-  @include img;
-}
-.img--frame {
-  @include img;
-}
-.img--avatar {
-  @include img;
-}
+
 
 //============Block Elements
 @mixin block (
@@ -86,17 +94,20 @@
     $disp: null,
     $back: null,
     $radius: null,
-    $width: null) {
+    $width: null,
+    $border: null) {
     margin: $margin;
     padding: $padding;
     list-style: $list;
     text-align: $textalign;
     display: $disp;
     background-color: $back;
+    border-width: $border;
     border-radius: $radius;
     width: $width;
-
 }
 .nav__item {
-  @include block ($disp: block, $list: none,$padding: 1em)
+  @include block ($disp: block, $list: none,$padding: 1em, $width: 100%, $textalign: center)
 }
+
+//==========align div.card

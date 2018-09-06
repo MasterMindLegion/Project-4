@@ -1,0 +1,23 @@
+//=================
+//Main content
+//==================
+//card
+.card {
+ .headline--primary {
+  padding-left: 15px; //variabel
+ }
+ .blockquote {
+   text-align: center;
+   padding-bottom: 1em;
+ }
+}
+//form
+.form {
+  .headline--secondary {
+    margin-right: 70%;
+    padding-bottom: 1em;
+  }
+  .img--avatar {
+    padding-bottom: 8%;
+  }
+}
