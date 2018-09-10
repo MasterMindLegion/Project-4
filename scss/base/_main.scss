@@ -2,25 +2,36 @@
 //Main content
 //==================
 //card
-.card {
- .headline--primary {
-  padding-left:$em; //variabel
- }
- .blockquote {
-   text-align: $t-a-c;
-   padding-bottom:$em;
-   border-left: 3px solid green;
- }
+  .card {
+   .headline--primary {
+    padding-left:$em; //variabel
+   }
+   .blockquote {
+     text-align: $t-a-c;
+     padding-bottom:$em;
+     border-left: 3px solid green;
+   }
 }
 //------form
 .form {
-  .headline--secondary {
-    margin-right: 70%;
-    padding-bottom: $em;
-  }
-  .img--avatar {
-    padding-bottom: 8%;
-  }
+    .headline--secondary {
+      margin-right: 70%;
+      padding-bottom: $em;
+    }
+    .img--avatar {
+      padding-bottom: 8%;
+    }
+    .form__label--hidden {
+      display: none;
+    }
+    .form__input {
+          border-top: none;
+          border-bottom: 4px solid green;
+          border-left: none;
+          border-right: none;
+          padding: $em;
+          margin:$em;
+    }
 }
 //-----Headings
 //headline--primary
@@ -29,30 +40,33 @@
 .headline--secondary {
   text-align: $t-a-l;
 }
+
+//--------Rows
+
 //------Grid System
 .grid__row {
 
-  .grid__col--12 {
-    background-color: lightgreen;
-  }
-  .grid__col--6
+      .grid__col--12.theme__colors {
+        background-color: lightgreen;
+      }
+      .grid__col--6.theme__colors {
+        background-color: darkblue;
+      }
 
+      .grid__col--4.theme__colors   {
+        background-color: lightblue;
+      }
+      .grid__col--3.theme__colors  {
+        background-color: $purple;
+      }
+      .grid__col--5.theme__colors  {
+        background-color: $green;
+      }
 
-
-  .grid__col--4  {
-
-  }
-  .grid__col--3 {
-
-  }
-  .grid__col--5 {
-
-  }
-
-  .grid__col--7  {
-
-  }
-  .grid__col--8 {
-
-  }
+      .grid__col--7.theme__colors   {
+        background-color: red;
+      }
+      .grid__col--8.theme__colors  {
+        background-color: $orange;
+      }
 }

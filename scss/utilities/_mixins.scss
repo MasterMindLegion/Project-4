@@ -36,6 +36,9 @@
 //all body
 .container {
   @include flexy($wrap: wrap, $flow: column, $just: center,  $align: center, $alignitems: center, $alignself: center);
+    @media (min-width: 1480px) {
+    background-color: black;
+    }
 }
 //all grid rows
 .grid__row {
@@ -51,6 +54,10 @@
 }
   .headline--secondary {
     @include flexy($wrap: wrap, $flow: row, $basis: 100%, $just: flex-start)
+  }
+  //images
+  .grid__col--6 {
+    @include flexy ($wrap: wrap, $flow: column, $just: center, $align: center, $alignitems: center, $alignself: center, $basis: 100%);
   }
   //buttons
   .grid__col--12 {
@@ -70,7 +77,7 @@
 
 //logo
 .img--logo {
-  @include flexyitem($order: 1,)
+  @include flexyitem($order: 1, $alignself: flex-end)
 }
 //=========Responsive Images
 @mixin img (
@@ -123,7 +130,9 @@
   $color: null,
   $radius: null,
   $t-dec: null,
-  $l-type: null) {
+  $l-type: null,
+  $trans: null,
+  $textalign: null,) {
   display: $disp;
   width: $width;
   padding: $padding;
@@ -134,7 +143,10 @@
   color: $color;
   text-decoration: $t-dec;
   list-style:$l-type;
+  text-transform: $trans;
+  text-align: $textalign;
 }
+// Buttons
 .btn--default,
 .btn--success,
 .btn--error,
@@ -146,9 +158,11 @@
                $margin: 10px,
                $radius: 8px,
                $t-dec: none,
+               $trans: uppercase,
+               $color: #fff,
                )
 }
-
+//Grid System
 .grid__col--2,
 .grid__col--3,
 .grid__col--4,
@@ -161,12 +175,14 @@
 .grid__col--11,
 .grid__col--12 {
 
-  @include btn($disp: block,
+  @include btn(
               $width: 100%,
               $padding: 1em,
               $margin: 10px,
-              $radius: 8px,              
+              $radius: 8px,
               )
-
-
 }
+//Form
+
+//================================================Media Quueries
+//1480px
