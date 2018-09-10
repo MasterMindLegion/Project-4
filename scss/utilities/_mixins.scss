@@ -15,7 +15,7 @@
        $alignself: null,
        $alignitems: null,
        $textalign: null,
-       $basis: null) {
+       $basis: null,) {
        display: $disp;
        flex-direction: $dir;
        flex-wrap: $wrap;
@@ -36,9 +36,7 @@
 //all body
 .container {
   @include flexy($wrap: wrap, $flow: column, $just: center,  $align: center, $alignitems: center, $alignself: center);
-    @media (min-width: 1480px) {
-    background-color: black;
-    }
+
 }
 //all grid rows
 .grid__row {
@@ -63,6 +61,9 @@
   .grid__col--12 {
       @include flexy($wrap: wrap,$flow: column, $just: center, $align: center, $alignitems: center, $alignself: center, $basis: 100%);
   }
+//========@media
+
+
 
 //----------FlexItems
 @mixin flexyitem(
@@ -73,8 +74,7 @@
       order: $order;
       align-self: $alignself;
     }
-//Form
-
+//Columns
 //logo
 .img--logo {
   @include flexyitem($order: 1, $alignself: flex-end)

@@ -12,9 +12,6 @@
   flex-basis: 90%;
   min-width: 100%;
   padding: 1%; }
-  @media (min-width: 1480px) {
-    .container {
-      background-color: black; } }
 
 .grid__row {
   display: flex;
