@@ -4,20 +4,55 @@
 //card
 .card {
  .headline--primary {
-  padding-left: 15px; //variabel
+  padding-left:$em; //variabel
  }
  .blockquote {
-   text-align: center;
-   padding-bottom: 1em;
+   text-align: $t-a-c;
+   padding-bottom:$em;
+   border-left: 3px solid green;
  }
 }
-//form
+//------form
 .form {
   .headline--secondary {
     margin-right: 70%;
-    padding-bottom: 1em;
+    padding-bottom: $em;
   }
   .img--avatar {
     padding-bottom: 8%;
+  }
+}
+//-----Headings
+//headline--primary
+
+//-headline--secondary
+.headline--secondary {
+  text-align: $t-a-l;
+}
+//------Grid System
+.grid__row {
+
+  .grid__col--12 {
+    background-color: lightgreen;
+  }
+  .grid__col--6
+
+
+
+  .grid__col--4  {
+
+  }
+  .grid__col--3 {
+
+  }
+  .grid__col--5 {
+
+  }
+
+  .grid__col--7  {
+
+  }
+  .grid__col--8 {
+
   }
 }

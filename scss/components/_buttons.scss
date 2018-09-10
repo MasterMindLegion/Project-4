@@ -1,0 +1,24 @@
+
+//Buttons:
+.form {
+  .btn--default {
+    background-color: $blue;
+  }
+}
+.grid__col--12 {
+    .btn--default {
+      background-color: $blue;
+    }
+    .btn--success {
+      background-color: $green;
+    }
+    .btn--error {
+      background-color: $red;
+    }
+    .btn--warning {
+      background-color: $orange;
+    }
+    .btn--info {
+      background-color: $purple;
+    }
+}

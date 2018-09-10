@@ -1,7 +1,50 @@
 //=================
 //Variables
 //==================
-//border
 
+//-------colors
 
-//gutters
+//content
+$color-primary:#699;
+$color-secondary: #6b717f;
+//navigation
+$nav-text: #808c99;
+//pure colors
+$white: #fff;
+$purple: #9A68C7;
+$blue: #3BA9E4;
+$green: #75B343;
+$orange: #FF6A42;
+$red: tomato;
+
+//------gutters
+$em: 1em;
+$small-gut: 10px;
+$standard: 25px;
+$large-gut: 50px;
+
+//-------text-align
+$t-a-c: center;
+$t-a-l: left;
+$t-a-r: right;
+
+//-------- BREAKPOINTS
+$break-m: 769px;
+$break-l: 1080px;
+
+//-------typohragphy
+//weight
+$w-light:	300;
+$w-regular:	400;
+$w-bold:	600;
+//size
+$s-small:	0.9em;
+$s-regular:1em;
+$s-large:	1.4em;
+$s-x-large:	1.8em;
+//font famiy
+$font-family-text: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-display:	Georgia, "Times New Roman", Times, serif;
+//style
+$cursive: italic;
+$obligue: obligue;

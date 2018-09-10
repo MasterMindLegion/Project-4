@@ -49,11 +49,13 @@
 .form {
   @include flexy($wrap: wrap,$flow: column, $just: center, $align: center, $alignitems: center, $alignself: center, $basis: 100%);
 }
-.form {
   .headline--secondary {
     @include flexy($wrap: wrap, $flow: row, $basis: 100%, $just: flex-start)
   }
-}
+  //buttons
+  .grid__col--12 {
+      @include flexy($wrap: wrap,$flow: column, $just: center, $align: center, $alignitems: center, $alignself: center, $basis: 100%);
+  }
 
 //----------FlexItems
 @mixin flexyitem(
@@ -110,4 +112,61 @@
   @include block ($disp: block, $list: none,$padding: 1em, $width: 100%, $textalign: center)
 }
 
-//==========align div.card
+//==========Buttons
+@mixin btn (
+  $disp: null,
+  $width: null,
+  $padding: null,
+  $margin: null,
+  $border: null,
+  $back: null,
+  $color: null,
+  $radius: null,
+  $t-dec: null,
+  $l-type: null) {
+  display: $disp;
+  width: $width;
+  padding: $padding;
+  margin: $margin;
+  border: $border;
+  border-radius: $radius;
+  border-color: $back;
+  color: $color;
+  text-decoration: $t-dec;
+  list-style:$l-type;
+}
+.btn--default,
+.btn--success,
+.btn--error,
+.btn--warning,
+.btn--info {
+   @include btn($disp: block,
+               $width: 100%,
+               $padding: 1em,
+               $margin: 10px,
+               $radius: 8px,
+               $t-dec: none,
+               )
+}
+
+.grid__col--2,
+.grid__col--3,
+.grid__col--4,
+.grid__col--5,
+.grid__col--6,
+.grid__col--7,
+.grid__col--8,
+.grid__col--9,
+.grid__col--10,
+.grid__col--11,
+.grid__col--12 {
+
+  @include btn($disp: block,
+              $width: 100%,
+              $padding: 1em,
+              $margin: 10px,
+              $radius: 8px,              
+              )
+
+
+}
