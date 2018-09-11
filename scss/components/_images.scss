@@ -1,0 +1,16 @@
+
+//==============Images
+.img {
+  @include img;
+
+ &--frame {
+   @include img;
+ }
+ &--avatar {
+   @include img;
+     padding-bottom: 8%;
+ }
+ &--logo {
+   @include flexyitem($order: 1, $alignself: flex-end);
+ }
+}

@@ -1,10 +1,12 @@
 
-//Buttons:
+//======Buttons:
+//form buttons
 .form {
   .btn--default {
     background-color: $blue;
   }
 }
+//grid buttons
 .grid__col--12 {
     .btn--default {
       background-color: $blue;
@@ -21,4 +23,20 @@
     .btn--info {
       background-color: $purple;
     }
+}
+//Common display buttons
+.btn--default,
+.btn--success,
+.btn--error,
+.btn--warning,
+.btn--info {
+   @include btn($disp: block,
+               $width: 100%,
+               $padding: 1em,
+               $margin: 10px,
+               $radius: 8px,
+               $t-dec: none,
+               $trans: uppercase,
+               $color: #fff,
+               )
 }

@@ -19,20 +19,21 @@ $red: tomato;
 
 //------gutters
 $em: 1em;
-$small-gut: 10px;
+$gutter: 10px;
 $standard: 25px;
 $large-gut: 50px;
+$max-width: 1000px;
 
 //-------text-align
 $t-a-c: center;
 $t-a-l: left;
 $t-a-r: right;
 
-//-------- BREAKPOINTS
+// BREAKPOINTS
+$break-m: 769px;
+$break-l: 1400px;
 
-$desktop: 1400px;
-
-//-------typohragphy
+//-------typoghragphy
 //weight
 $w-light:	300;
 $w-regular:	400;

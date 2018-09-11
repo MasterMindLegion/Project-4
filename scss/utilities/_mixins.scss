@@ -1,9 +1,15 @@
 //=================
 //Mixins
 //==================
-
 //=============Flexbox
-
+//!!!!!!!!!!!!!!!!!can´t use variabel or it doesn ´t work / maybe global!?
+@mixin desktop-large {
+  @include flexy;
+  @media (min-width: #{$break-l}) {
+    @content;
+  }
+}
+//=====================
 //--------FlexContainer
 @mixin flexy (
        $disp:flex,
@@ -32,39 +38,9 @@
        flex-basis: 90%;
        min-width: 100%;
        padding: 1%;
+       @content;
 }
-//all body
-.container {
-  @include flexy($wrap: wrap, $flow: column, $just: center,  $align: center, $alignitems: center, $alignself: center);
-
-}
-//all grid rows
-.grid__row {
-  @include flexy($wrap: wrap,$flow: column, $just: center, $align: center, $alignitems: center, $alignself: center, $basis: 100%);
-}
-// card row
-.card {
-  @include flexy($wrap: wrap,$flow: column, $just: center, $align: center, $textalign: left, $basis: 100%)
-}
-//form
-.form {
-  @include flexy($wrap: wrap,$flow: column, $just: center, $align: center, $alignitems: center, $alignself: center, $basis: 100%);
-}
-  .headline--secondary {
-    @include flexy($wrap: wrap, $flow: row, $basis: 100%, $just: flex-start)
-  }
-  //images
-  .grid__col--6 {
-    @include flexy ($wrap: wrap, $flow: column, $just: center, $align: center, $alignitems: center, $alignself: center, $basis: 100%);
-  }
-  //buttons
-  .grid__col--12 {
-      @include flexy($wrap: wrap,$flow: column, $just: center, $align: center, $alignitems: center, $alignself: center, $basis: 100%);
-  }
-//========@media
-
-
-
+//===================
 //----------FlexItems
 @mixin flexyitem(
       $flex: 1,
@@ -74,26 +50,14 @@
       order: $order;
       align-self: $alignself;
     }
-//Columns
-//logo
-.img--logo {
-  @include flexyitem($order: 1, $alignself: flex-end)
-}
 //=========Responsive Images
 @mixin img (
       $mw: 100%,
       $height: auto ){
       max-width: $mw;
       height: $height;
+      @content;
 }
-
-.img--logo,
-.img--frame,
-.img--avatar{
-  @include img;
-}
-
-
 //============Block Elements
 @mixin block (
     $margin: null,
@@ -114,75 +78,33 @@
     border-width: $border;
     border-radius: $radius;
     width: $width;
+    @content;
 }
-.nav__item {
-  @include block ($disp: block, $list: none,$padding: 1em, $width: 100%, $textalign: center)
-}
-
 //==========Buttons
 @mixin btn (
-  $disp: null,
-  $width: null,
-  $padding: null,
-  $margin: null,
-  $border: null,
-  $back: null,
-  $color: null,
-  $radius: null,
-  $t-dec: null,
-  $l-type: null,
-  $trans: null,
-  $textalign: null,) {
-  display: $disp;
-  width: $width;
-  padding: $padding;
-  margin: $margin;
-  border: $border;
-  border-radius: $radius;
-  border-color: $back;
-  color: $color;
-  text-decoration: $t-dec;
-  list-style:$l-type;
-  text-transform: $trans;
-  text-align: $textalign;
+    $disp: null,
+    $width: null,
+    $padding: null,
+    $margin: null,
+    $border: null,
+    $back: null,
+    $color: null,
+    $radius: null,
+    $t-dec: null,
+    $l-type: null,
+    $trans: null,
+    $textalign: null,) {
+    display: $disp;
+    width: $width;
+    padding: $padding;
+    margin: $margin;
+    border: $border;
+    border-radius: $radius;
+    border-color: $back;
+    color: $color;
+    text-decoration: $t-dec;
+    list-style:$l-type;
+    text-transform: $trans;
+    text-align: $textalign;
+    @content;
 }
-// Buttons
-.btn--default,
-.btn--success,
-.btn--error,
-.btn--warning,
-.btn--info {
-   @include btn($disp: block,
-               $width: 100%,
-               $padding: 1em,
-               $margin: 10px,
-               $radius: 8px,
-               $t-dec: none,
-               $trans: uppercase,
-               $color: #fff,
-               )
-}
-//Grid System
-.grid__col--2,
-.grid__col--3,
-.grid__col--4,
-.grid__col--5,
-.grid__col--6,
-.grid__col--7,
-.grid__col--8,
-.grid__col--9,
-.grid__col--10,
-.grid__col--11,
-.grid__col--12 {
-
-  @include btn(
-              $width: 100%,
-              $padding: 1em,
-              $margin: 10px,
-              $radius: 8px,
-              )
-}
-//Form
-
-//================================================Media Quueries
-//1480px
