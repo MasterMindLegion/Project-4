@@ -1,42 +1,13 @@
+//==============================================================================
+//===============================Buttons:
+//==============================================================================
+//???Use to style mixin or @extend ? Any advantages or disadvantages?
 
-//======Buttons:
-//form buttons
-.form {
-  .btn--default {
-    background-color: $blue;
-  }
-}
-//grid buttons
-.grid__col--12 {
-    .btn--default {
-      background-color: $blue;
-    }
-    .btn--success {
-      background-color: $green;
-    }
-    .btn--error {
-      background-color: $red;
-    }
-    .btn--warning {
-      background-color: $orange;
-    }
-    .btn--info {
-      background-color: $purple;
-    }
-}
 //Common display buttons
 .btn--default,
 .btn--success,
 .btn--error,
 .btn--warning,
 .btn--info {
-   @include btn($disp: block,
-               $width: 100%,
-               $padding: 1em,
-               $margin: 10px,
-               $radius: 8px,
-               $t-dec: none,
-               $trans: uppercase,
-               $color: #fff,
-               )
+   @extend %btn;
 }

@@ -1,16 +1,20 @@
-//=================
-//Mixins
-//==================
-//=============Flexbox
+//==============================================================================
+//-------------------------Mixins
+//==============================================================================
+
 //!!!!!!!!!!!!!!!!!can´t use variabel or it doesn ´t work / maybe global!?
+//==============================================================================
+//-------------------------@Media Queries
+//==============================================================================
 @mixin desktop-large {
   @include flexy;
   @media (min-width: #{$break-l}) {
     @content;
   }
 }
-//=====================
-//--------FlexContainer
+//==============================================================================
+//-------------------------FlexContainer
+//==============================================================================
 @mixin flexy (
        $disp:flex,
        $dir:null,
@@ -21,7 +25,10 @@
        $alignself: null,
        $alignitems: null,
        $textalign: null,
-       $basis: null,) {
+       $basis: null,
+       $width: null,
+       $margin: null,
+       $padding: null ) {
        display: $disp;
        flex-direction: $dir;
        flex-wrap: $wrap;
@@ -32,16 +39,15 @@
        align-items: $alignitems;
        text-align: $textalign;
        flex-basis: $basis;
-       padding: 0;
-       margin: 0;
-       list-style: none;
-       flex-basis: 90%;
-       min-width: 100%;
-       padding: 1%;
+       width: $width;
+       margin: $margin;
+       padding: $padding;
+
        @content;
 }
-//===================
-//----------FlexItems
+//==============================================================================
+//-------------------------FlexItems
+//==============================================================================
 @mixin flexyitem(
       $flex: 1,
       $order: null,
@@ -50,7 +56,9 @@
       order: $order;
       align-self: $alignself;
     }
-//=========Responsive Images
+    //==============================================================================
+    //-------------------------Responsive Images
+    //==============================================================================
 @mixin img (
       $mw: 100%,
       $height: auto ){
@@ -58,7 +66,9 @@
       height: $height;
       @content;
 }
-//============Block Elements
+///==============================================================================
+//-------------------------Block Elements
+//==============================================================================
 @mixin block (
     $margin: null,
     $padding: null,
@@ -80,7 +90,9 @@
     width: $width;
     @content;
 }
-//==========Buttons
+//==============================================================================
+//-------------------------Buttons
+//==============================================================================
 @mixin btn (
     $disp: null,
     $width: null,
@@ -108,3 +120,30 @@
     text-align: $textalign;
     @content;
 }
+//==============================================================================
+//-------------------------Center containers
+//==============================================================================
+
+@mixin center($w: 100%) {
+  width: $w;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+// GRID - includes grid function, which defaults to max-width value of 100%
+@mixin grid($per-line, $color) {
+flex: 1 per-line($per-line);
+text-align: center;
+color: $color-text;
+border: none;
+border-radius: 5px;
+padding: $gutter;
+margin: 5px;
+background-color: $color;
+  @media (min-width: $break-m) {
+margin-bottom: 2em;
+  }
+}
+*/

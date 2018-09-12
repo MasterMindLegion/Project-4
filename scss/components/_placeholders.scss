@@ -1,8 +1,49 @@
-
-%centered {
-  text-align: center;
+//==============================================================================
+//-------------------------Buttons
+//==============================================================================
+%btn {
+  width: 100%;
+  padding: $em;
+  margin:$gutter;
+  border-radius: 8px;
+  text-decoration:$n;
+  text-transform: uppercase;
+  color: $white;
+     &:hover {
+      color: $white;
+      opacity: 0.8;
+    }
+    &:active {
+      opacity: initial;
 }
-
+}
+//==============================================================================
+//------------------------Navigation
+//==============================================================================
+%nav{
+  border: $n;
+  list-style: $n;
+}
+%li {
+   display: inline-block;
+}
+%a {
+  width: 100%;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $nav-text;
+}
+%hover {
+  background-color: $color-secondary;
+  color: $white;
+  border-radius: $em;
+}
+%active {
+  background-color: $color-primary;
+}
+//==============================================================================
+//-------------------------Clearfix
+//==============================================================================
 %clearfix {
   &:after {
     content: "";
@@ -10,3 +51,9 @@
     clear: both;
   }
 }
+
+
+//Links
+//Images
+//Headlines
+//Nav items

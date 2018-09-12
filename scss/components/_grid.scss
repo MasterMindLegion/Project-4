@@ -1,0 +1,134 @@
+//==============================================================================
+//===============================Grid
+//==============================================================================
+
+//====================Flex Containers
+.container {
+  @include flexy (
+                  $disp: flex,
+                  $wrap: wrap,
+                  $flow: column,
+                  $just: center,
+                  $alignitems: center,
+                  $alignself: center,
+                  $width: 90%,
+                  $margin: 0,
+                  $padding: 0,
+  )
+
+}
+.grid__row {
+  @include flexy (
+                  $disp: flex,
+                  $wrap: wrap,
+                  $flow: column,
+                  $just: center,
+                  $alignitems: center,
+                  $alignself: center,
+                  $width: 90%,
+                  $margin: 0,
+                  $padding: 0,
+  )
+}
+
+//=============Flex Items
+//1 logo
+.grid__col--3 {
+  @include flexyitem (
+                  $order:-1,
+                  $flex: 1 100%,
+)
+}
+//2 navigation
+.grid__col--9 {
+  @include flexyitem (
+                    $order:0,
+                    $flex: 1 100%,
+  )
+}
+//3 paragraf
+.grid__col--12 {
+  @include flexyitem (
+                    $order: 3,
+                    $flex: 1 100%,
+  )
+}
+//4 main content
+.grid__col--8 {
+  @include flexyitem (
+                    $order: 4,
+                    $flex: 1 100%,
+
+  )
+}
+//5 - form
+.grid__col--4 {
+  @include flexyitem (
+                    $order: 5,
+                    $flex: 1 100%,
+  )
+}
+//6 - images
+.grid__col--6 {
+  @include flexyitem (
+                    $order: 6,
+                    $flex: 1 100%,
+                    $alignself: center,
+  )
+
+}
+
+//7 buttons
+.grid__col--12 {
+  @include flexyitem (
+                    $order: 7,
+                    $flex: 1 100%,
+  )
+}
+
+.centered {
+
+}
+.theme__colors {
+
+}
+
+/*
+.grid__row
+.grid__col--2
+.grid__col--3
+.grid__col--4
+.grid__col--5
+.grid__col--6
+.grid__col--7
+.grid__col--8
+.grid__col--9
+.grid__col--10
+.grid__col--11
+.grid__col--12
+.centered
+.theme__colors
+*/
+//@for $i from through $g-col-count {
+
+//}
+//#{$i}
+
+
+//==============================================================================
+//===============================Forms
+//==============================================================================
+.form {
+  @include flexy (
+                  $disp: flex,
+                  $wrap: wrap,
+                  $flow: column,
+                  $just: center,
+  )
+}
+
+/*
+
+.form__label--hidden
+.form__input
+*/
