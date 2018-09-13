@@ -28,7 +28,24 @@
                   $width: 90%,
                   $margin: 0,
                   $padding: 0,
-  )
+  );
+  @include desktop-large {
+    @include flexy (
+                   $flow: row,
+                   $width: 100,
+                   $just: space-between,
+                   $alignitems: center,
+                   $padding: 2%,
+    ) {
+
+  }
+    }
+
+
+}
+// Make nested grid 100% ----does it work?
+[class*="grid__col--"] > {
+  width: 100%;
 }
 
 //=============Flex Items
@@ -74,25 +91,58 @@
                     $order: 6,
                     $flex: 1 100%,
                     $alignself: center,
-  )
-
+                    );
 }
-
 //7 buttons
 .grid__col--12 {
   @include flexyitem (
                     $order: 7,
                     $flex: 1 100%,
-  )
+  );
+  @include desktop-large {
+    @include flexy (
+    ) {
+    }
+  }
 }
+/*
 //8 themes columns
-.theme__colors {
-  @extend %theme-colors;
-}
-//the last column
-.centered {
+//1
+.grid__col--12 .theme__colors {
 
 }
+//2
+.grid__col--6 .theme__colors {
+
+}
+//3
+.grid__col--4 .theme__colors{
+
+}
+//4
+.grid__col--3 .theme__colors {
+
+}
+//5
+.grid__col--5 .theme__colors {
+
+}
+.grid__col--7 .theme__colors {
+
+}
+//6
+.grid__col--8 .theme__colors {
+
+}
+.grid__col--4 .theme__colors {
+
+}
+//7
+.grid__col--7 .theme__colors .centered {
+
+}
+*/
+//the last column
 
 /*
 .grid__row

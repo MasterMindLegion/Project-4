@@ -7,7 +7,6 @@
 //-------------------------@Media Queries
 //==============================================================================
 @mixin desktop-large {
-  @include flexy;
   @media (min-width: #{$break-l}) {
     @content;
   }

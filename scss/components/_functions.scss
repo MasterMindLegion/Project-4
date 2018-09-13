@@ -16,7 +16,7 @@
 }
 
 //==============================================================================
-//---
+//---set the "context" width for the grid
 //==============================================================================
 @function g-context($g-col-width, $g-col-count, $g-gutter-width) {
   $g-context: ($g-col-width * $g-col-count) + ($g-gutter-width * ($g-col-count -1));
@@ -29,3 +29,10 @@
   // map inception
   @return map-get(map-get($colors, $color-name), $color-variant);
 }
+//==============================================================================
+// Calculate em values
+//==============================================================================
+@function em($target, $context: $base__font-size) {
+	@return ($target / $context) * 1em;
+}
+  //==============================================================================
