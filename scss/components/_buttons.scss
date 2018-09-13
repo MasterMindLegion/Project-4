@@ -3,11 +3,28 @@
 //==============================================================================
 //???Use to style mixin or @extend ? Any advantages or disadvantages?
 
-//Common display buttons
-.btn--default,
-.btn--success,
-.btn--error,
-.btn--warning,
+//button default - login, default
+.btn--default {
+    @extend %btn;
+    background-color: $color-default;
+}
+//button success
+.btn--success {
+    @extend %btn;
+    background-color: $color-success;
+}
+//button error
+.btn--error {
+     @extend %btn;
+     background-color: $color-error;
+}
+//button warning
+.btn--warning {
+     @extend %btn;
+     background-color: $color-warning;
+}
+//button info
 .btn--info {
-   @extend %btn;
+     @extend %btn;
+     background-color: $color-info;
 }

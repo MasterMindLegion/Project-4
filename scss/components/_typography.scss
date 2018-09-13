@@ -15,6 +15,7 @@
     font-style: $cursive;
     font-size: $s-regular;
     font-family: $font-family-display;
+    @extend %blockquote;
   }
   .headline--primary{
     font-weight: $w-bold;
@@ -28,5 +29,10 @@
     font-size: $s-large;
     color:$nav-text;
   }
-
+}
+//==============================================================================
+//-------------------------Link
+//==============================================================================
+.link {
+  @extend %link;
 }

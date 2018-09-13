@@ -85,11 +85,12 @@
                     $flex: 1 100%,
   )
 }
-
-.centered {
-
-}
+//8 themes columns
 .theme__colors {
+  @extend %theme-colors;
+}
+//the last column
+.centered {
 
 }
 
@@ -127,8 +128,9 @@
   )
 }
 
-/*
-
-.form__label--hidden
-.form__input
-*/
+.form__label--hidden  {
+  @extend %form-label;
+}
+.form__input {
+  @extend %form-input;
+}

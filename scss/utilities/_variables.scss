@@ -12,10 +12,20 @@ $color-primary-dark: darken($color-primary, 20%);
 $color-primary-light: lighten($color-primary, 20%);
 $color-secondary: #6b717f;
 
+//---------buttons
+$color-default: #3BA9E4;
+$color-success: #63cc82;
+$color-error: #e4757a;
+$color-warning: #fd7856;
+$color-info: #927bc1;
+
 //-----------navigation
 $nav-text: #808c99;
 $nav-text-dark: darken($nav-text, 25%);
 $nav-text-light: lighten($nav-text, 25%);
+
+//-------------------------Link
+$link: #39CCCC;
 
 //-----------------pure colors
 $white: #fff;
@@ -24,6 +34,18 @@ $blue: #3BA9E4;
 $green: #75B343;
 $orange: #FF6A42;
 $red: tomato;
+//-----grid colors
+// Grid
+$grid-colors:(
+  '12': #77e2c1,
+  '8' : #ee8968,
+  '7' : #ee969c,
+  '6' : #33a5c6,
+  '5' : #81da96,
+  '4' : #66d6f0,
+  '3' : #dda3f1,
+  );
+  $grid-items: ('3', '4', '5', '6', '7', '8', '12');
 
 //==============================================================================
 //-------------------------Gutters
@@ -80,13 +102,17 @@ $g-col-width: 65px;
 $g-gutter-width: 20px;
 $g-col-count : 12;
 $g-cont-max-w: 1050px;
+//==============================================================================
+//-------------------------Borders
+//==============================================================================
+$border-primary: 4px solid green;
 
 //==============================================================================
 //-------------------------Flex
 //==============================================================================
 $flex: flex;
 $row: row;
-$col: column;
+$flow: column;
 $flex-wrap: wrap;
 $just-center: center;
 $just-space-around: space-around;

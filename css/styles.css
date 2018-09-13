@@ -316,6 +316,21 @@ template {
 [hidden] {
   display: none; }
 
+.btn--default {
+  background-color: #3BA9E4; }
+
+.btn--success {
+  background-color: #63cc82; }
+
+.btn--error {
+  background-color: #e4757a; }
+
+.btn--warning {
+  background-color: #fd7856; }
+
+.btn--info {
+  background-color: #927bc1; }
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -389,11 +404,6 @@ template {
   justify-content: center;
   flex-flow: column; }
 
-/*
-
-.form__label--hidden
-.form__input
-*/
 .img {
   max-width: 100%;
   height: auto; }
@@ -433,11 +443,7 @@ template {
     font-size: 1.4em;
     color: #808c99; }
 
-.btn--default,
-.btn--success,
-.btn--error,
-.btn--warning,
-.btn--info {
+.btn--default, .btn--success, .btn--error, .btn--warning, .btn--info {
   width: 100%;
   padding: 1em;
   margin: 10px;
@@ -445,21 +451,14 @@ template {
   text-decoration: none;
   text-transform: uppercase;
   color: #fff; }
-  .btn--default:hover,
-  .btn--success:hover,
-  .btn--error:hover,
-  .btn--warning:hover,
-  .btn--info:hover {
+  .btn--default:hover, .btn--success:hover, .btn--error:hover, .btn--warning:hover, .btn--info:hover {
     color: #fff;
     opacity: 0.8; }
-  .btn--default:active,
-  .btn--success:active,
-  .btn--error:active,
-  .btn--warning:active,
-  .btn--info:active {
+  .btn--default:active, .btn--success:active, .btn--error:active, .btn--warning:active, .btn--info:active {
     opacity: initial; }
 
 .nav__item {
+  width: 100%;
   border: none;
   list-style: none; }
 
@@ -479,5 +478,32 @@ template {
 
 .nav__item:active {
   background-color: #699; }
+
+.form__label--hidden {
+  display: none; }
+
+.form__input {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 4px solid green;
+  text-align: center; }
+
+.link {
+  color: #39CCCC;
+  text-decoration: none;
+  font-weight: 600; }
+  .link:hover {
+    font-size: 1.5em; }
+
+.container .blockquote {
+  border-left: 4px solid green;
+  padding-left: 2%; }
+
+.theme__colors {
+  padding: 1em;
+  margin: 10px;
+  text-transform: uppercase;
+  color: black; }
 
 /*# sourceMappingURL=styles.css.map */
