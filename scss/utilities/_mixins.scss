@@ -50,10 +50,12 @@
 @mixin flexyitem(
       $flex: 1,
       $order: null,
-      $alignself: null) {
+      $alignself: null,
+      $padding: null ) {
       flex: $flex;
       order: $order;
       align-self: $alignself;
+       padding: $padding;
     }
     //==============================================================================
     //-------------------------Responsive Images
@@ -129,6 +131,25 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+//==============================================================================
+//-------------------------Dynamicely changing colors
+//==============================================================================
+@mixin bg-colors($map) {
+	@each $theme, $color in $map{
+		&--#{$theme} {
+			background-color: $color;
+		}
+	}
+}
+
+
+
+
+
+
+
+
 
 /*
 // GRID - includes grid function, which defaults to max-width value of 100%

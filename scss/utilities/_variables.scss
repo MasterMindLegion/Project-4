@@ -13,11 +13,32 @@ $color-primary-light: lighten($color-primary, 20%);
 $color-secondary: #6b717f;
 
 //---------buttons
-$color-default: #3BA9E4;
-$color-success: #63cc82;
-$color-error: #e4757a;
-$color-warning: #fd7856;
-$color-info: #927bc1;
+$fountain-blue  : #52bab3;
+$emerald        : #5ece7f;
+$sunglo         : #e67478;
+$coral          : #ff784f;
+$purple-majesty : #9279c3;
+$scooter        : #39add1;
+//Map
+$ui-colors: (
+	default : $fountain-blue,
+	success : $emerald,
+	error   : $sunglo,
+	warning : $coral,
+	info    : $purple-majesty,
+  '12'   : #77e2c1,
+  '6'    : #ee8968,
+  '4'    : #ee969c,
+  '3'   :  #33a5c6,
+  '5'   :  #81da96,
+  '7'   :  #66d6f0,
+  '8'   :  #dda3f1,
+  );
+
+//---------themes
+
+
+//map
 
 //-----------navigation
 $nav-text: #808c99;
