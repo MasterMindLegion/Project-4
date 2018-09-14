@@ -7,6 +7,7 @@
 //===============================Flex Containers
 //==============================================================================
 .container {
+  @extend %clearfix;
   @include flexy (
                   $disp: flex,
                   $wrap: wrap,
@@ -18,9 +19,9 @@
                   $margin: 0,
                   $padding: 0,
   );
-   @extend %clearfix;
 }
 .grid__row {
+  @extend %clearfix;
   @include flexy (
                   $disp: flex,
                   $wrap: wrap,
@@ -32,19 +33,18 @@
                   $margin: 0,
                   $padding: 0,
   );
-  @extend %clearfix;
   @include desktop-large {
-    @include flexy (
+      @include flexy (
                    $flow: row,
                    $width: 100,
                    $just: space-between,
                    $alignitems: baseline,
-                   $padding: 2%,
-    ) {
-
+                   $padding: 2% ) {
   }
     }
-
+}
+.theme__colors {
+   width: 100%;
 
 }
 // Make nested grid 100% ----does it work?
@@ -67,31 +67,26 @@
   @include flexyitem (
                     $order:0,
                     $flex: 1 100%,
+                    $alignself: center,
   );
-                    width: 100%;
-                    text-align: $t-a-c;
-   @include desktop-large {
-     @include flexy(
-                     $disp:flex,
-                     $just: flex-end,
-                     $alignself: flex-start,
-                   ) {
-                   }
-   }
 }
 //3 paragraf
 .grid__col--12 {
   @include flexyitem (
                     $order: 3,
                     $flex: 1 100%,
-  )
+  );
+  @include desktop-large {
+    @include flexy(
+    ){
+    }
+  }
 }
 //4 main content
 .grid__col--8 {
   @include flexyitem (
                     $order: 4,
                     $flex: 1 100%,
-
   )
 }
 //5 - form
@@ -108,7 +103,7 @@
                     $flex: 1 100%,
                     $alignself: center,
                     );
-                    padding-left: 5%;
+                    padding-left: 15%;
                     padding-right: 5%;
 }
 //7 buttons
@@ -117,79 +112,62 @@
                     $order: 7,
                     $flex: 1 100%,
   );
-  @include desktop-large {
-    @include flexy (
-    ) {
-    }
-  }
 }
-/*
-//8 themes columns
 
 //1
-.grid__col--12 .theme__colors {
-
+.grid__col--12.theme__colors {
+  @include grid(1);
+  &:last-of-type {
+    margin-bottom: 2em;
+}
 }
 //2
-.grid__col--6 .theme__colors {
-
+.grid__col--6.theme__colors {
+@include grid(2);
+&:last-of-type {
+  margin-bottom: 2em;
+}
 }
 //3
-.grid__col--4 .theme__colors{
+.grid__col--4.theme__colors{
+  @include grid(3);
+    &:last-of-type {
+      margin-bottom: 2em;
+    }
 
 }
 //4
-.grid__col--3 .theme__colors {
-
+.grid__col--3.theme__colors {
+  @include grid(4);
+    &:last-of-type {
+      margin-bottom: 2em;
+  }
 }
 //5
-.grid__col--5 .theme__colors {
-
+.grid__col--5.theme__colors {
+  @include grid(3)
 }
-.grid__col--7 .theme__colors {
-
+.grid__col--7.theme__colors {
+  @include grid(1);
+  &:last-of-type {
+    margin-bottom: 2em;
+}
 }
 //6
-.grid__col--8 .theme__colors {
-
+.grid__col--8.theme__colors {
+  @include grid(2)
 }
-.grid__col--4 .theme__colors {
+.grid__col--4.theme__colors {
 
 }
 //7
-.grid__col--7 .theme__colors .centered {
-
+.grid__col--7.theme__colors .centered {
+   @include grid(1)
 }
-*/
-//the last column
-
-/*
-.grid__row
-.grid__col--2
-.grid__col--3
-.grid__col--4
-.grid__col--5
-.grid__col--6
-.grid__col--7
-.grid__col--8
-.grid__col--9
-.grid__col--10
-.grid__col--11
-.grid__col--12
-.centered
-.theme__colors
-*/
-//@for $i from through $g-col-count {
-
-//}
-//#{$i}
-
-
 //==============================================================================
 //===============================Forms
 //==============================================================================
 .form {
-
   @include flexy (
                   $disp: flex,
                   $wrap: wrap,

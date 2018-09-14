@@ -14,3 +14,9 @@ $purple-majesty : #9279c3;
 $scooter        : #39add1;
 */
 // does not work here
+// ==================Colors Change
+  @each $item in $grid-items {
+  .theme__colors.grid__col--#{$item} {
+    background: map_get($grid-colors, $item);
+  }
+}

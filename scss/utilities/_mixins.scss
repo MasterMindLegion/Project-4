@@ -2,7 +2,7 @@
 //-------------------------Mixins
 //==============================================================================
 
-//!!!!!!!!!!!!!!!!!can´t use variabel or it doesn ´t work / maybe global!?
+
 //==============================================================================
 //-------------------------@Media Queries
 //==============================================================================
@@ -41,7 +41,6 @@
        width: $width;
        margin: $margin;
        padding: $padding;
-
        @content;
 }
 //==============================================================================
@@ -142,11 +141,20 @@
 		}
 	}
 }
+//not able tu use it on grid system
 
-
-
-
-
+// GRID - includes grid function, which defaults to max-width value of 100%
+@mixin grid($per-line) {
+flex: 1 per-line($per-line);
+text-align: center;
+border: none;
+border-radius: 5px;
+padding: $gutter;
+margin: 5px;
+  @media (min-width: $break-l) {
+margin-bottom: 2em;
+  }
+}
 
 
 

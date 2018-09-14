@@ -1,20 +1,31 @@
 //==============================================================================
 //-------------------------Navigation
 //==============================================================================
+.nav {
+  @include desktop-large {
+    @include flexy (
+                    $disp: flex,
+                    $just: space-between, ) {
+    }
+  }
+}
+
 
 .nav__item {
-@extend %clearfix;
+  @extend %clearfix;
   @extend %nav;
-   li {
-      @extend %li;
-    }
-    a {
-      @extend %a;
-    }
-          &:hover {
-             @extend %hover;
-          }
-          &:active {
-            @extend %active;
-          }
+
+     li {
+        @extend %li;
+
+      }
+      a {
+        @extend %a;
+      }
+            &:hover {
+               @extend %hover;
+            }
+            &:active {
+              @extend %active;
+            }
     }

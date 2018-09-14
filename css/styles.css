@@ -316,41 +316,29 @@ template {
 [hidden] {
   display: none; }
 
-.btn--default,
-.theme__colors--default {
+.btn--default {
   background-color: #52bab3; }
-.btn--success,
-.theme__colors--success {
+.btn--success {
   background-color: #5ece7f; }
-.btn--error,
-.theme__colors--error {
+.btn--error {
   background-color: #e67478; }
-.btn--warning,
-.theme__colors--warning {
+.btn--warning {
   background-color: #ff784f; }
-.btn--info,
-.theme__colors--info {
+.btn--info {
   background-color: #9279c3; }
-.btn--12,
-.theme__colors--12 {
-  background-color: #77e2c1; }
-.btn--6,
-.theme__colors--6 {
+.btn--12 {
+  background-color: #52bab3; }
+.btn--6 {
   background-color: #ee8968; }
-.btn--4,
-.theme__colors--4 {
+.btn--4 {
   background-color: #ee969c; }
-.btn--3,
-.theme__colors--3 {
+.btn--3 {
   background-color: #33a5c6; }
-.btn--5,
-.theme__colors--5 {
+.btn--5 {
   background-color: #81da96; }
-.btn--7,
-.theme__colors--7 {
+.btn--7 {
   background-color: #66d6f0; }
-.btn--8,
-.theme__colors--8 {
+.btn--8 {
   background-color: #dda3f1; }
 
 .container {
@@ -383,6 +371,9 @@ template {
       width: 100;
       padding: 2%; } }
 
+.theme__colors {
+  width: 100%; }
+
 [class*="grid__col--"] > {
   width: 100%; }
 
@@ -393,17 +384,14 @@ template {
 .grid__col--9 {
   flex: 1 100%;
   order: 0;
-  width: 100%;
-  text-align: center; }
-  @media (min-width: 1400px) {
-    .grid__col--9 {
-      display: flex;
-      justify-content: flex-end;
-      align-self: flex-start; } }
+  align-self: center; }
 
 .grid__col--12 {
   flex: 1 100%;
   order: 3; }
+  @media (min-width: 1400px) {
+    .grid__col--12 {
+      display: flex; } }
 
 .grid__col--8 {
   flex: 1 100%;
@@ -417,70 +405,111 @@ template {
   flex: 1 100%;
   order: 6;
   align-self: center;
-  padding-left: 5%;
+  padding-left: 15%;
   padding-right: 5%; }
 
 .grid__col--12 {
   flex: 1 100%;
   order: 7; }
+
+.grid__col--12.theme__colors {
+  flex: 1 98%;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px; }
   @media (min-width: 1400px) {
-    .grid__col--12 {
-      display: flex; } }
+    .grid__col--12.theme__colors {
+      margin-bottom: 2em; } }
+  .grid__col--12.theme__colors:last-of-type {
+    margin-bottom: 2em; }
 
-/*
-//8 themes columns
+.grid__col--6.theme__colors {
+  flex: 1 46%;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px; }
+  @media (min-width: 1400px) {
+    .grid__col--6.theme__colors {
+      margin-bottom: 2em; } }
+  .grid__col--6.theme__colors:last-of-type {
+    margin-bottom: 2em; }
 
-//1
-.grid__col--12 .theme__colors {
+.grid__col--4.theme__colors {
+  flex: 1 27.3333333333%;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px; }
+  @media (min-width: 1400px) {
+    .grid__col--4.theme__colors {
+      margin-bottom: 2em; } }
+  .grid__col--4.theme__colors:last-of-type {
+    margin-bottom: 2em; }
 
-}
-//2
-.grid__col--6 .theme__colors {
+.grid__col--3.theme__colors {
+  flex: 1 17%;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px; }
+  @media (min-width: 1400px) {
+    .grid__col--3.theme__colors {
+      margin-bottom: 2em; } }
+  .grid__col--3.theme__colors:last-of-type {
+    margin-bottom: 2em; }
 
-}
-//3
-.grid__col--4 .theme__colors{
+.grid__col--5.theme__colors {
+  flex: 1 27.3333333333%;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px; }
+  @media (min-width: 1400px) {
+    .grid__col--5.theme__colors {
+      margin-bottom: 2em; } }
 
-}
-//4
-.grid__col--3 .theme__colors {
+.grid__col--7.theme__colors {
+  flex: 1 98%;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px; }
+  @media (min-width: 1400px) {
+    .grid__col--7.theme__colors {
+      margin-bottom: 2em; } }
+  .grid__col--7.theme__colors:last-of-type {
+    margin-bottom: 2em; }
 
-}
-//5
-.grid__col--5 .theme__colors {
+.grid__col--8.theme__colors {
+  flex: 1 46%;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px; }
+  @media (min-width: 1400px) {
+    .grid__col--8.theme__colors {
+      margin-bottom: 2em; } }
 
-}
-.grid__col--7 .theme__colors {
+.grid__col--7.theme__colors .centered {
+  flex: 1 98%;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px; }
+  @media (min-width: 1400px) {
+    .grid__col--7.theme__colors .centered {
+      margin-bottom: 2em; } }
 
-}
-//6
-.grid__col--8 .theme__colors {
-
-}
-.grid__col--4 .theme__colors {
-
-}
-//7
-.grid__col--7 .theme__colors .centered {
-
-}
-*/
-/*
-.grid__row
-.grid__col--2
-.grid__col--3
-.grid__col--4
-.grid__col--5
-.grid__col--6
-.grid__col--7
-.grid__col--8
-.grid__col--9
-.grid__col--10
-.grid__col--11
-.grid__col--12
-.centered
-.theme__colors
-*/
 .form {
   display: flex;
   flex-wrap: wrap;
@@ -524,6 +553,32 @@ $coral          : #ff784f;
 $purple-majesty : #9279c3;
 $scooter        : #39add1;
 */
+.theme__colors.grid__col--3 {
+  background: #dda3f1; }
+
+.theme__colors.grid__col--4 {
+  background: #66d6f0; }
+
+.theme__colors.grid__col--5 {
+  background: #81da96; }
+
+.theme__colors.grid__col--6 {
+  background: #33a5c6; }
+
+.theme__colors.grid__col--7 {
+  background: #ee969c; }
+
+.theme__colors.grid__col--8 {
+  background: #ee8968; }
+
+.theme__colors.grid__col--12 {
+  background: #77e2c1; }
+
+@media (min-width: 1400px) {
+  .nav {
+    display: flex;
+    justify-content: space-between; } }
+
 .container {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -551,6 +606,7 @@ $scooter        : #39add1;
 .btn--default, .btn--success, .btn--error, .btn--warning, .btn--info {
   width: 100%;
   padding: 1em;
+  flex: 1 10%;
   margin: 10px;
   border-radius: 8px;
   text-decoration: none;
@@ -563,17 +619,14 @@ $scooter        : #39add1;
     opacity: initial; }
 
 .nav__item {
-  width: 100%;
   border: none;
   list-style: none;
-  min-width: 100%;
   padding: 2%; }
 
 .nav__item li {
   display: inline-block; }
 
 .nav__item a {
-  width: 100%;
   text-transform: uppercase;
   text-decoration: none;
   color: #808c99; }

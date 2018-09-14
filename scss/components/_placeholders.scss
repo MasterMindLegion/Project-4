@@ -4,6 +4,7 @@
 %btn {
   width: 100%;
   padding: $em;
+  flex: 1 per-line(5);
   margin:$gutter;
   border-radius: 8px;
   text-decoration:$n;
@@ -30,10 +31,9 @@
 //------------------------Navigation
 //==============================================================================
 %nav{
-  width: 100%;
+
   border: $n;
   list-style: $n;
-  min-width: 100%;
   padding: 2%;
 
 }
@@ -43,11 +43,9 @@
 
 }
 %a {
-  width: 100%;
   text-transform: uppercase;
   text-decoration: none;
   color: $nav-text;
-
 }
 %hover {
   background-color: $color-secondary;

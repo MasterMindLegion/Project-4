@@ -28,7 +28,9 @@
      @extend %btn;
 
 }
-.btn,
-.theme__colors {
+
+//=============Color map
+.btn {
   @include bg-colors($ui-colors);
+
 }
