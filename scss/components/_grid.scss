@@ -113,7 +113,6 @@
                     $flex: 1 100%,
   );
 }
-
 //1
 .grid__col--12.theme__colors {
   @include grid(1);
@@ -172,6 +171,7 @@
                   $disp: flex,
                   $wrap: wrap,
                   $flow: column,
+                  $alignitems: center,
                   $just: center,
                   $padding: 0 0  0 5%,
   )
