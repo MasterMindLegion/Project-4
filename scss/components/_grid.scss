@@ -144,7 +144,7 @@
 }
 //5
 .grid__col--5.theme__colors {
-  @include grid(3)
+  @include grid(1.4)
 }
 .grid__col--7.theme__colors {
   @include grid(1);
